@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant Review Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <style>
+        body {
+            background-image: url(images/restaurantbg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+    </style>
+
+</head>
+
+<body onload="getRestaurantData()">
+
+    <!-- Include top navigation here -->
+    <div w3-include-html="top-navigation.html"></div>
+
+    <!-- This is the container that holds the initial message, heading, and restaurants -->
+    <div class="container">
+        <!-- The message will be shown when the page loads and will
+        disappear after the restaurants are loaded -->
+        <!-- <div class="row" id="parent">
+            Retrieving restaurants from database... Please wait...<br><br>
+            If you are seeing this message for a long time, it is likely
+            that you have a JavaScript error. Troubleshoot your script by
+            using the browser console panel now. Please use either Firefox
+            or Chrome to render this webpage.
+        </div> -->
+        <p>
+            <!-- This is the heading showing how many restaurants are there -->
+        <h3 style=color:black id="summary"></h3>
+
+        </p>
+
+        <div class="boxer p-3 my-3">
+
+            <div>
+                <h5>Categories</h5>
+                <div class="form-check-inline" style="text-align: center;">
+                    <label class="form-check-label">
+                        <input type="checkbox" id="filterChinese" name="Chinese" class="form-check-input" value="0"
+                            onClick="displayChinese()"> Chinese
+                    </label>
+                </div>
+
+
+                <div class="form-check-inline" style="text-align: center;">
+                    <label class="form-check-label">
+                        <input type="checkbox" id="filterWestern" name="Western" class="form-check-input" value="1"
+                            onClick="displayWestern()"> Western
+                    </label>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <h5 style>Location</h5>
+                <div class="form-check-inline" style="text-align: center;">
+                    <label class="form-check-label">
+                        <input type="checkbox" id="filterNorth" name="North" class="form-check-input" value="1"
+                            onClick="displayNorth()">North
+                    </label>
+                </div>
+                <div class="form-check-inline" style="text-align: center;">
+                    <label class="form-check-label">
+                        <input type="checkbox" id="filterEast" name="East" class="form-check-input" value="2"
+                            onClick="displayEast()">East
+                    </label>
+                </div>
+            </div>
+
+            <div style="margin-left: auto;">
+                <ul class="navbar-nav">
+                    <li class="nav-item searchbar">
+                        <input class="searchbar-control item" type="text" id="restaurantSearch" onkeyup="searchRestaurants()"
+                            placeholder="Search here">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Displays thumbnails of the restaurant here -->
+        <div class="row">
+            <div id="restaurantTable" class="row"></div>
+        </div>
+
+        <!-- Include the restaurants modal here -->
+        <div w3-include-html="restaurants-modal.html"></div>
+        <!-- Include the review modal here -->
+        <div w3-include-html="review-modal.html"></div>
+        <!-- Include the new review modal here -->
+        <div w3-include-html="new-review-modal.html"></div>
+        <!-- Include the edit review modal here -->
+        <!-- <div w3-include-html="edit-review-modal.html"></div> -->
+        <div w3-include-html="login-modal.html"></div>
+        <div w3-include-html="success-modal.html"></div>
+        <div w3-include-html="fail-modal.html"></div>
+        <div w3-include-html="edit-review-modal.html"></div>
+        <div w3-include-html="review-fail-modal.html"></div>
+        <br><br>
+        <!-- Include the footer here -->
+        <div w3-include-html="footer.html"></div>
+
+
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="js/app.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/restaurants.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/checktoken.js"></script>
+<script src="js/updateProfile.js"></script>
+<script src="js/loadProfile.js"></script>
+
+<script>
+    var loginName = sessionStorage.getItem("usernameName");
+    console.log(loginName)
+    document.getElementById("welcomeUsername").textContent = "Welcome, " + loginName;
+    var userid = sessionStorage.getItem("userid");
+    console.log(userid)
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">
+        <h1>Twist</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  navbar-right">
+            <li class="nav-item active" id="home">
+                <a class="nav-link" href="index.html" id="home" onClick="home()">
+                    <h2>Home</h2>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item word" style = "display: none;" id="welcomeUsername">
+                <h2 id="welcomeMsg">Welcome</h2>
+            </li>
+            
+            <li class="nav-item" id="registerMenu">
+                <a class="nav-link" href="register.html" id="register">
+                    <h2> Register </h2>
+                </a>
+            </li>
+            <li class="nav-item" id="loginMenu">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">
+                    <h2> Login </h2>
+                </a>
+            </li>
+
+            <li class="nav-item" id="logoutMenu" style="display:none;">
+                <a class="nav-link" href="#" id="logout" onClick="logoutMe()">
+                    <h2> Log out </h2>
+                </a>
+            </li>
+
+            <li class="nav-item" id="profileMenu" style="display:none;">
+                <a class="nav-link" href="profile.html">
+                    <h2> Profile </h2>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</nav>

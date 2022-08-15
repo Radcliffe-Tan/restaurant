@@ -1,0 +1,111 @@
+.edit {
+    float: right;
+    padding-right: 10px;
+}
+
+footer {
+    background: #aaa;
+    color: white;
+}
+h1{font-size: 40px;}
+
+h2{font-size: 20px;}
+
+
+.navbar-right {
+    margin-right: auto!important;
+}
+
+.navbar-center{
+    margin-right: 250px;
+}
+
+.row{
+    display: flex;
+}
+.box{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    padding: 1px;
+    display: block;
+    height: auto;
+}
+
+.colorblue{
+    background-color: none;
+    color: turquoise;
+}
+
+
+.navbar-nav .form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.navbar-nav .item{
+	border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.searchbar-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: #e9e7e7;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.topbox {
+    float: top; 
+    width:25%;
+    height:280px;
+}
+
+.leftbox {
+    float: top; 
+    width:25%;
+    height:100px;
+}
+
+
+.right{
+    margin-right: auto!important;
+}
+
+
+.boxer{
+
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+
+
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+
+}
+
+.navbar-nav .word{
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+}

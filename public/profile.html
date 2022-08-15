@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant Review Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit=no">
+
+    <script>
+        var firstName, lastName, userName, gender, phoneNumber, emailAddress, profilePicture, homeAddress, password
+        token = sessionStorage.getItem("token");
+    </script>
+
+
+    <!-- Bootstrap CSS-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <style>
+        body {
+            background-image: url(images/restaurantbg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+    </style>
+
+</head>
+
+<!-- Include top navigation here -->
+<div w3-include-html="top-navigation.html"></div>
+
+<!-- This is the container that holds the initial message, heading, and restaurants -->
+
+<div class="container p-3 my-3">
+    <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-70">
+                <div class="card-body">
+                    <div class="user-avatar">
+                        <label for="myinput"><h3>Avatar</h3></label>
+                        <input id="myinput" type="file" onchange="encode();">
+                        <div>
+                            <img style="width:200px" id="profilepictureProfile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Personal Details</h6>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="firstnameProfile"> Firstname</label>
+                                <input type="text" class="form-control item" id="firstnameProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="lastnameProfile"> Lastname</label>
+                                <input type="text" class="form-control item" id="lastnameProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="usernameProfile"> Username</label>
+                                <input type="text" disabled class="form-control item" id="usernameProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="passwordProfile"> Password</label>
+                                <input type="text" disabled class="form-control item" id="passwordProfile">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gutters">
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="genderProfile"> Gender</label>
+                                <input type="text" disabled class="form-control item" id="genderProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="phonenumberProfile"> Phone Number</label>
+                                <input type="text" class="form-control item" id="phonenumberProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="homeaddressProfile"> Home Address</label>
+                                <input type="text" class="form-control item" id="homeaddressProfile">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="emailaddressProfile"> Email Address</label>
+                                <input type="text" class="form-control item" id="emailaddressProfile">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="text-right">
+                                <button onclick="updatedProfile();" type="button" id="submit" name="submit"
+                                    class="btn btn-primary">Update</button>
+                                <button onclick="deleteProfile();" type="button" id="submit" name="submit"
+                                    class="btn btn-primary">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+
+<script src="js/logout.js"></script>
+<script src="js/redirect.js"></script>
+<script src="js/loadProfile.js"></script>
+<script src="js/updateProfile.js"></script>
+<script src="js/deleteProfile.js"></script>
+</html>
