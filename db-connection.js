@@ -3,13 +3,13 @@ var mysql = require('mysql');
 var connection = mysql.createConnection
 ({
 
-    host:'184.73.134.236',
+    host:'ubuntu@ec2-184-73-134-236.comput-1.amazonaws.com',
 
     port: '3306',
 
-    user:'root',
+    user:'admin',
 
-    password:'cdev',
+    password:'2101135H',
 
     database: 'restaurant_review'
 
