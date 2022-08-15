@@ -35,11 +35,35 @@ app.route('/restaurant/chinese').get(restaurantController.chineseRestaurant);
 app.route('/restaurant/east').get(restaurantController.eastRestaurant);
 app.route('/restaurant/north').get(restaurantController.northRestaurant);
 
-app.route('/mysql').get(fromMYSQL);
+app.route('/mysql').get(fromMYSQL, fromMYSQL1, fromMYSQL2, fromMYSQL3);
 
 function fromMYSQL(request,responds){
   
-  var sql = "Select * from restaurants";
+  var sql = "Select * from profile";
+  connection.query(sql,function (err,result){
+    responds.send(result);
+  })
+}
+
+function fromMYSQL1(request,responds){
+  
+  var sql = "Select * from restaurant";
+  connection.query(sql,function (err,result){
+    responds.send(result);
+  })
+}
+
+function fromMYSQL2(request,responds){
+  
+  var sql = "Select * from restaurantInfo";
+  connection.query(sql,function (err,result){
+    responds.send(result);
+  })
+}
+
+function fromMYSQL3(request,responds){
+  
+  var sql = "Select * from review";
   connection.query(sql,function (err,result){
     responds.send(result);
   })
