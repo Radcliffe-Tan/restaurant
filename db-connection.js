@@ -11,7 +11,7 @@ var connection = mysql.createConnection
 
     password:'2101135H',
 
-    database: 'database-1'
+    database: 'restaurant_review'
 
 });
 
