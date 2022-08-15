@@ -35,5 +35,15 @@ app.route('/restaurant/chinese').get(restaurantController.chineseRestaurant);
 app.route('/restaurant/east').get(restaurantController.eastRestaurant);
 app.route('/restaurant/north').get(restaurantController.northRestaurant);
 
+app.route('/mysql').get(fromMYSQL);
+
+function fromMYSQL(request,responds){
+  
+  var sql = "Select * from restaurants";
+  connection.query(sql,function (err,result){
+    responds.send(result);
+  })
+}
+
 app.listen(8080, "127.0.0.1"); // start the nodejs to be listening for incoming request @ port 8080
 console.log("web server running @ http://127.0.0.1:8080"); // output to console
