@@ -36,4 +36,4 @@ app.route('/restaurant/east').get(restaurantController.eastRestaurant);
 app.route('/restaurant/north').get(restaurantController.northRestaurant);
 
 app.listen(8080, "ec2-54-234-197-49.compute-1.amazonaws.com"); // start the nodejs to be listening for incoming request @ port 8080
-console.log("web server running @ ec2-3-85-51-19.compute-1.amazonaws.com:8080"); // output to console
+console.log("web server running @ http://ec2-54-234-197-49.compute-1.amazonaws.com:8080"); // output to console
