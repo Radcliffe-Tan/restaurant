@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var getProfile = new XMLHttpRequest();
 
-    getProfile.open("POST", "http://127.0.0.1:4040/userinformation", true);
+    getProfile.open("POST", "ec2-3-85-51-19.compute-1.amazonaws.com:8080/userinformation", true);
     getProfile.setRequestHeader("Content-Type", "application/json");
     getProfile.onload = function (){
 
