@@ -16,7 +16,7 @@ function updatedProfile(){
 
     var updateUser = new XMLHttpRequest();
 
-    updateUser.open("PUT", "http://ec2-3-85-51-19.compute-1.amazonaws.com:8080/profiles", true)
+    updateUser.open("PUT", "http://ec2-54-234-197-49.compute-1.amazonaws.com:8080/profiles", true)
     updateUser.setRequestHeader("Content-Type", "application/json")
     updateUser.onload = function () 
         {
