@@ -3,7 +3,7 @@ function registerMe()
 
     var registerUser = new XMLHttpRequest();
 
-    registerUser.open("POST", "http://ec2-44-206-149-253.compute-1.amazonaws.com:8080/profiles", true)
+    registerUser.open("POST", "http://ec2-52-207-150-172.compute-1.amazonaws.com:8080/profiles", true)
     registerUser.setRequestHeader("Content-Type", "application/json")
     registerUser.onload = function () 
         {
