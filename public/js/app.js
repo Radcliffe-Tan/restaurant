@@ -15,5 +15,5 @@ var thumbsup = 'images/thumbsup.png';
 var thumbsupcolor = 'images/thumbsupcolor.png';
 var rating = 0;
 
-var translate_url = new URL("https://py2ab7e8rj.execute-api.us-east-1.amazonaws.com/default/translation");
+var translate_url = new URL("https://82nflr2y9h.execute-api.us-east-1.amazonaws.com/translate");
 var newText = "";
