@@ -6,7 +6,7 @@ function pollyTextToSpeech() {
 
     elemPlayButton.addEventListener("click", function pollyTextToSpeech() {
 
-        let url = "https://dum41kup26.execute-api.us-east-1.amazonaws.com/default/text_to_speech";
+        let url = "https://2bhzmqnemc.execute-api.us-east-1.amazonaws.com/default/polly";
         url += "?voice=" + encodeURIComponent(elemVoice.value);
         url += "&text=" + encodeURIComponent(elemText.textContent);
 
