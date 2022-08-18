@@ -224,7 +224,7 @@ function notification(){
     notification.setRequestHeader("Content-Type", "application/json");
 
     userid = sessionStorage.getItem("userid");
-    username = sessionStorage.getItem("username");
+    username = document.getElementById("username").value;
     reviewmessage = document.getElementById("userReviews").value;
 
     notification.onload = function () {
