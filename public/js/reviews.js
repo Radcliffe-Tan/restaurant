@@ -223,10 +223,10 @@ function notification(){
     notification.open("POST", "https://hjgkflrqu8.execute-api.us-east-1.amazonaws.com/default/SNS,true);
     notification.setRequestHeader("Content-Type", "application/json");
 
-    restaurantname = sessionStorage.getItem("username");
-    userid = sessionStorage.getItem("_id");
-    username = sessionStorage.getItem("userName");
-    reviewmessage = document.getElementById("userReview").value;
+    restaurantname = sessionStorage.getItem("");
+    userid = sessionStorage.getItem("userid");
+    username = sessionStorage.getItem("username");
+    reviewmessage = document.getElementById("userReviews").value;
 
     var payload = {restaurantname:restaurantname,userid:userid,username:username,reviewmessage:reviewmessage};
     console.log(payload)
