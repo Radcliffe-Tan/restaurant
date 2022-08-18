@@ -61,7 +61,7 @@ function addReview() {
     
     var token = sessionStorage.getItem("token"); //Check for session storage
     console.log(token);
-    if (token != null) {
+   // if (token != null) {
 
         var review = new Object();
         review.restaurant_id = restaurant_array[currentIndex].restaurantId; // restaurant Id is required by server to create new review
@@ -85,10 +85,10 @@ function addReview() {
         };
         // Convert the data in review object to JSON format before sending to the server.
         postReview.send(JSON.stringify(review));
-    }
-    else {
-        $('#reviewfailModal').modal('show')
-    }
+//    }
+//     else {
+//         $('#reviewfailModal').modal('show')
+//     }
 }
 
 //This function allows the user to mouse hover the black and white popcorn
