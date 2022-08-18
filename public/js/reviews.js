@@ -59,7 +59,7 @@ function newReview() {
 
 function addReview() {
 
-    console.log(addReview());
+    console.log("hello");
     
     var token = sessionStorage.getItem("token"); //Check for session storage
     console.log(token);
