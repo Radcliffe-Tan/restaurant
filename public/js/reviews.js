@@ -58,8 +58,6 @@ function newReview() {
 }
 
 function addReview() {
-
-    console.log("hello");
     
     var token = sessionStorage.getItem("token"); //Check for session storage
     console.log(token);
@@ -227,7 +225,7 @@ function notification(){
 
     userid = sessionStorage.getItem("userid");
     username = sessionStorage.getItem("username");
-    reviewmessage = document.getElementById("reviewBody").value;
+    reviewmessage = document.getElementById("userReviews").value;
 
     notification.onload = function () {
         log = JSON.parse(notification.responseText);
