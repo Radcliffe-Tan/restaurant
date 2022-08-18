@@ -94,6 +94,7 @@ function showRestaurantDetails(element) {
     document.getElementById("telehponeNumber").textContent = restaurant_array[item].telephoneNumber;
     document.getElementById("description").textContent = restaurant_array[item].description;
     document.getElementById("map").src = restaurant_array[item].map;
+    sessionStorage.setItem("restaurantName", restaurant_array[item].restaurantName);
 }
 
 function searchRestaurants() {
