@@ -9,6 +9,11 @@ function notification(){
     username = sessionStorage.getItem("username");
     reviewmessage = document.getElementById("reviewBody").value;
 
+    notification.onload = function () {
+        log = JSON.parse(notification.responseText);
+        console.log(log);
+    };
+    
     var payload = {userid:userid,username:username,reviewmessage:reviewBody};
     console.log(payload)
     notification.send(JSON.stringify(payload));
