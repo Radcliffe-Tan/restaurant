@@ -10,6 +10,7 @@ function notification(){
     reviewmessage = document.getElementById("reviewBody").value;
     notification.onload = function () {
         log = JSON.parse(notification.responseText);
+        console.log("hai");
         console.log(log);
     };
     var payload = {userid:userid,username:username,reviewmessage:reviewmessage};
