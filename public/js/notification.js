@@ -8,11 +8,7 @@ function notification(){
     userid = sessionStorage.getItem("userid");
     username = sessionStorage.getItem("username");
     reviewmessage = document.getElementById("reviewBody").value;
-    notification.onload = function () {
-        log = JSON.parse(notification.responseText);
-        console.log("hai");
-        console.log(log);
-    };
+
     var payload = {userid:userid,username:username,reviewmessage:reviewmessage};
     console.log(payload)
     notification.send(JSON.stringify(payload));
