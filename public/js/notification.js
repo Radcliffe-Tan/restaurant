@@ -2,7 +2,7 @@ function notification(){
 
     var notification = new XMLHttpRequest();
     console.log("please work")
-    notification.open("POST", "https://hjgkflrqu8.execute-api.us-east-1.amazonaws.com/default/SNS,true);
+    notification.open("POST", "https://hjgkflrqu8.execute-api.us-east-1.amazonaws.com/default/SNS",true);
     notification.setRequestHeader("Content-Type", "application/json");
 
     userid = sessionStorage.getItem("userid");
